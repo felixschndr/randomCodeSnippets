@@ -1,7 +1,14 @@
+## Purpose
+
+The output of this command displays all lines in a given file that are longer than `$linelength`. This is useful for finding long lines to refactor them to be shorter.
+
 ## Code
 
 ```bash
-file=bas; linecounter=0; cat $file | while IFS= read -r line; do ((linecounter++)); chars=${#line}; if (( $chars > 140 )); then echo -e "Zeile: $linecounter\tZeichen: $chars"; fi ; done
+file=bas #File to go through
+linelength=140 #Print all lines longer than 140 characters
+
+linecounter=0; cat $file | while IFS= read -r line; do ((linecounter++)); chars=${#line}; if (( $chars > $linelength )); then echo -e "Zeile: $linecounter\tZeichen: $chars"; fi ; done
 ```
 
 ## Example
@@ -58,3 +65,8 @@ Zeile: 1111	Zeichen: 187
 Zeile: 1116	Zeichen: 182
 Zeile: 1120	Zeichen: 144
 ```
+
+## Additional notes
+
+- Append `| wc -l` to the code to count the problematic lines.
+  - This cannot be done with a variable inside the for-loop since read opens a subshell and variables set inside of it aren't available after the loop
