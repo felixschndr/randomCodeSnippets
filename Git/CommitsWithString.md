@@ -31,6 +31,7 @@ Date:   Thu Dec 16 11:24:54 2021 +0100
 ## Additional notes
 
 - `--all` searches over branches
+- `-i` searches case-insensitive
 - `-p` also shows the changes not only the commit information
   - Alternatively: `git show <hash>`
 - [Source](https://stackoverflow.com/a/4472267)
