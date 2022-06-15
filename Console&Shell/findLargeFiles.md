@@ -12,7 +12,7 @@ ncdu
 
 ```bash
 --- /home/fschneider -----------------------------------------------------------------------------------
-  150,5 GiB [##########] /repos                                                                         
+  150,5 GiB [##########] /repos
    10,6 GiB [          ] /.local
     5,2 GiB [          ] /.cache
     2,5 GiB [          ] /.config
@@ -25,7 +25,7 @@ ncdu
 ```
 ```bash
 --- /home/fschneider/repos/belegauskunft ---------------------------------------------------------------
-                         /..                                                                            
+                         /..
    15,4 MiB [##########] /.git
    13,0 MiB [########  ] /node_modules
     6,1 MiB [###       ] /javascript
