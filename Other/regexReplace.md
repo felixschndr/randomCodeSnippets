@@ -8,7 +8,7 @@ Example: `#Testcomment` becomes `# Testcomment`
 
 Comment character is `#` (i.e. in `Bash`)
 
-Search for `(#)([a-zA-Z])`
+Search for `(#)([a-zA-ZÄÖÜäöü])`
 
 Replace with `$1 $2`
 
@@ -19,7 +19,7 @@ Replace with `$1 $2`
     $ str="#Testcomment"
     '#d'
 
-    $ str.replace(/(#)([a-zA-Z])/, '$1 $2')
+    $ str.replace(/(#)([a-zA-ZÄÖÜäöü])/, '$1 $2')
     '# Testcomment'
     ```
 
@@ -28,7 +28,7 @@ Replace with `$1 $2`
     $ str="#Testcomment"
     '//Testcomment'
 
-    $ str.replace(/(\/\/)([a-zA-Z])/, '$1 $2')
+    $ str.replace(/(\/\/)([a-zA-ZÄÖÜäöü])/, '$1 $2')
     '// Testcomment'
     ```
 
